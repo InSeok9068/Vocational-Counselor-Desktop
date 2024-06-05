@@ -3,7 +3,7 @@
   $schema: 'https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json',
   appId: 'vocational-counselor-desktop',
   asar: true,
-  productName: '직업 상담사 관리',
+  productName: '상담사 실적관리',
   directories: {
     output: 'release/${version}',
   },
