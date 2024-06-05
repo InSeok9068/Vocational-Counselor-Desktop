@@ -129,6 +129,9 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+# unplugin-vue-components
+components.d.ts
+
 # electron
 dist-electron
 release
