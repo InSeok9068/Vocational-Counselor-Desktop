@@ -16,7 +16,7 @@
     </template>
 
     <template #end>
-      <SplitButton label="Save" :model="items" />
+      <SplitButton label="Save" />
     </template>
   </Toolbar>
 </template>
