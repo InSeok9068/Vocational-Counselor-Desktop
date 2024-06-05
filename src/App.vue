@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import TheLaytout from '@/layouts/TheLaytout.vue';
+import TheLaytout from './layouts/TheLaytout.vue';
 </script>

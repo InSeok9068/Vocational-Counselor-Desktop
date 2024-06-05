@@ -1,6 +1,5 @@
-import '@/assets/style.css';
-import Aura from '@/presets/aura';
-import router from '@/router';
+/* eslint-disable */
+
 import { createPinia } from 'pinia';
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 import PrimeVue from 'primevue/config';
@@ -12,6 +11,9 @@ import Toast from 'primevue/toast';
 import ToastService from 'primevue/toastservice';
 import { createApp } from 'vue';
 import App from './App.vue';
+import './assets/style.css';
+import Aura from './presets/aura';
+import router from './router';
 
 const app = createApp(App);
 
@@ -34,4 +36,9 @@ app.component('DynamicDialog', DynamicDialog);
 app.component('Toast', Toast);
 /* PrimeVue 전역요소는 미리 설정 */
 
-app.mount('#app');
+app.mount('#app').$nextTick(() => {
+  // Use contextBridge
+  window.ipcRenderer.on('main-process-message', (_event, message) => {
+    console.log(message);
+  });
+});
