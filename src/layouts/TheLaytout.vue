@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto">
+  <div class="flex p-3">
     <router-view />
   </div>
 </template>
