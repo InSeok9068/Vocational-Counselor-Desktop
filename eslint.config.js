@@ -22,6 +22,12 @@ export default tseslint.config(
     },
   },
   {
-    rules: {},
+    rules: {
+      // Typescript
+      '@typescript-eslint/no-unsafe-argument': 'off',
+
+      // Vue
+      'vue/multi-word-component-names': 'off',
+    },
   },
 );

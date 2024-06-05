@@ -4,7 +4,13 @@
   "version": "1.0.0",
   "description": "직업 상담사 데스크톱 앱",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vue-tsc && vite build --emptyOutDir",
+    "preview": "vite preview",
+    "typegen": "pocketbase-typegen -j ./pb_schema.json -o ./src/api/pocketbase-types.ts",
+    "lint": "eslint \"src/**/*.{ts,vue}\"",
+    "lint:fix": "eslint \"src/**/*.{ts,vue}\" --fix",
+    "lint:format": "prettier --write ."
   },
   "dependencies": {
     "@vueuse/core": "^10.10.0",
@@ -28,7 +34,7 @@
     "autoprefixer": "^10.4.19",
     "electron": "^30.0.9",
     "electron-builder": "^25.0.0-alpha.9",
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.26.0",
     "globals": "^15.3.0",
     "pocketbase-typegen": "^1.2.1",
