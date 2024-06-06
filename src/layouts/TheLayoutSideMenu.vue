@@ -1,5 +1,5 @@
 <template>
-  <Menu :model="items" class="float-left h-full md:w-[15rem]">
+  <Menu :model="items" class="float-left h-[calc(100vh-9rem)] md:w-[15rem] border-t-0">
     <template #start>
       <span class="inline-flex w-full items-center gap-1 px-2 py-2 sm:w-[15rem]">
         <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-[2rem]">
@@ -29,18 +29,6 @@
           >{{ item.shortcut }}</span
         >
       </a>
-    </template>
-    <template #end>
-      <button
-        v-ripple
-        class="p-link relative flex w-full items-center overflow-hidden rounded-none p-2 pl-3 text-surface-700 hover:bg-surface-200 dark:text-surface-0/80 dark:hover:bg-surface-600"
-      >
-        <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" class="mr-2" shape="circle" />
-        <span class="inline-flex flex-col justify-start">
-          <span class="font-bold">Amy Elsner</span>
-          <span class="text-sm">Admin</span>
-        </span>
-      </button>
     </template>
   </Menu>
 </template>

@@ -14,6 +14,7 @@ import TheLayoutSideMenu from './layouts/TheLayoutSideMenu.vue';
 import TheLaytout from './layouts/TheLaytout.vue';
 
 onMounted(() => {
+  debugger;
   console.log(pb.collection('users').getFullList());
 });
 </script>

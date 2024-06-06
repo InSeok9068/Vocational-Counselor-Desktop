@@ -1,7 +1,7 @@
 <template>
   <Menubar :model="items">
     <template #start>
-      <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-8">
+      <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16">
         <path d="..." class="fill-primary-500 dark:fill-primary-400" />
         <path d="..." class="fill-surface-700 dark:fill-surface-0/80" />
       </svg>
