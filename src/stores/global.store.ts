@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
-export const useSampleStore = defineStore(
-  'sample',
+export const useGlobalStore = defineStore(
+  'global',
   () => {
     const isSample = ref(false);
 

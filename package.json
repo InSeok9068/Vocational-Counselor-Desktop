@@ -17,6 +17,7 @@
     "@vueuse/core": "^10.10.0",
     "dayjs": "^1.11.11",
     "lodash-es": "^4.17.21",
+    "open-props": "^1.7.4",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
     "pocketbase": "^0.21.3",

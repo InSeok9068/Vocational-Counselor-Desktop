@@ -1,3 +1,5 @@
-<template>모달</template>
+<template>
+  <Toast />
+</template>
 
 <script setup lang="ts"></script>
