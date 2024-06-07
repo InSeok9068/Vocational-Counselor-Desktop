@@ -1,5 +1,5 @@
 <template>
-  <Menu :model="items" class="float-left h-[calc(100vh-9rem)] md:w-[15rem] border-t-0">
+  <Menu :model="items" class="float-left h-[calc(100vh-9rem)] border-t-0 md:w-[15rem]">
     <template #start>
       <span class="inline-flex w-full items-center gap-1 px-2 py-2 sm:w-[15rem]">
         <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-[2rem]">
