@@ -12,7 +12,14 @@ export const useSign = () => {
   const signinArgs = ref<UiSigninArgs>({} as UiSigninArgs);
 
   const signup = async () => {
-    await pb.collection('users').create(signupArgs.value);
+    await pb.collection('users').create({
+      username: signupArgs.value.id,
+      password: signupArgs.value.password,
+      passwordConfirm: signupArgs.value.passwordConfirm,
+      email: signupArgs.value.email,
+      emailVisibility: true,
+      name: signupArgs.value.name,
+    });
 
     updateDialog({
       ...dialog.value,

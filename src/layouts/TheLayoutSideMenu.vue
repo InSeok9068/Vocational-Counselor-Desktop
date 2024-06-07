@@ -11,8 +11,9 @@
         <span
           v-if="item.shortcut"
           class="ml-auto rounded-md border border-surface-200 bg-surface-100 p-1 text-xs dark:border-surface-700 dark:bg-surface-700"
-          >{{ item.shortcut }}</span
         >
+          {{ item.shortcut }}
+        </span>
       </a>
     </template>
   </Menu>

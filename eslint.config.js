@@ -25,6 +25,7 @@ export default tseslint.config(
     rules: {
       // Typescript
       '@typescript-eslint/no-unsafe-argument': 'off',
+      '@typescript-eslint/no-floating-promises': 'off',
 
       // Vue
       'vue/html-self-closing': 'off',

@@ -14,9 +14,14 @@
     </template>
 
     <template #end>
-      <SplitButton label="Save" icon="pi pi-check" menuButtonIcon="pi pi-cog" />
+      <div class="flex items-center gap-3">
+        <span>{{ pb.authStore.isAuthRecord && `${pb.authStore.model!.name} 님` }}</span>
+        <SplitButton label="Save" icon="pi pi-check" menuButtonIcon="pi pi-cog" />
+      </div>
     </template>
   </Toolbar>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import pb from '../api/pocketbase';
+</script>

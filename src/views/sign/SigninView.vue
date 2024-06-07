@@ -1,5 +1,5 @@
 <template>
-  <Card class="mx-auto">
+  <Card class="mx-auto p-3">
     <template #title>로그인</template>
     <template #content>
       <div class="flex flex-col gap-2">
