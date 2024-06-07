@@ -1,6 +1,6 @@
 <template>
   <Card class="mx-auto">
-    <template #title>회원가입</template>
+    <template #title> 회원가입 </template>
     <template #content>
       <div class="flex flex-col gap-2">
         <label for="id">아이디</label>

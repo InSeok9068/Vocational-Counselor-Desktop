@@ -27,7 +27,11 @@ export default tseslint.config(
       '@typescript-eslint/no-unsafe-argument': 'off',
 
       // Vue
+      'vue/html-self-closing': 'off',
+      'vue/attribute-hyphenation': 'off',
+      'vue/max-attributes-per-line': 'off',
       'vue/multi-word-component-names': 'off',
+      'vue/singleline-html-element-content-newline': 'off',
     },
   },
 );

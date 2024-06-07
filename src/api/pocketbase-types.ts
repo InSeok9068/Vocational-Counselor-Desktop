@@ -1,69 +1,69 @@
 /**
-* This file was @generated using pocketbase-typegen
-*/
+ * This file was @generated using pocketbase-typegen
+ */
 
-import type PocketBase from 'pocketbase'
-import type { RecordService } from 'pocketbase'
+import type PocketBase from 'pocketbase';
+import type { RecordService } from 'pocketbase';
 
 export enum Collections {
-	Counselors = "counselors",
-	Users = "users",
+  Counselors = 'counselors',
+  Users = 'users',
 }
 
 // Alias types for improved usability
-export type IsoDateString = string
-export type RecordIdString = string
-export type HTMLString = string
+export type IsoDateString = string;
+export type RecordIdString = string;
+export type HTMLString = string;
 
 // System fields
 export type BaseSystemFields<T = never> = {
-	id: RecordIdString
-	created: IsoDateString
-	updated: IsoDateString
-	collectionId: string
-	collectionName: Collections
-	expand?: T
-}
+  id: RecordIdString;
+  created: IsoDateString;
+  updated: IsoDateString;
+  collectionId: string;
+  collectionName: Collections;
+  expand?: T;
+};
 
 export type AuthSystemFields<T = never> = {
-	email: string
-	emailVisibility: boolean
-	username: string
-	verified: boolean
-} & BaseSystemFields<T>
+  email: string;
+  emailVisibility: boolean;
+  username: string;
+  verified: boolean;
+} & BaseSystemFields<T>;
 
 // Record types for each collection
 
 export type CounselorsRecord = {
-	email: string
-	name: string
-	sort: number
-}
+  email: string;
+  name: string;
+  sort: number;
+};
 
 export type UsersRecord = {
-	name: string
-}
+  name: string;
+};
 
 // Response types include system fields and match responses from the PocketBase API
-export type CounselorsResponse<Texpand = unknown> = Required<CounselorsRecord> & BaseSystemFields<Texpand>
-export type UsersResponse<Texpand = unknown> = Required<UsersRecord> & AuthSystemFields<Texpand>
+export type CounselorsResponse<Texpand = unknown> = Required<CounselorsRecord> & BaseSystemFields<Texpand>;
+export type UsersResponse<Texpand = unknown> = Required<UsersRecord> & AuthSystemFields<Texpand>;
 
 // Types containing all Records and Responses, useful for creating typing helper functions
 
 export type CollectionRecords = {
-	counselors: CounselorsRecord
-	users: UsersRecord
-}
+  counselors: CounselorsRecord;
+  users: UsersRecord;
+};
 
 export type CollectionResponses = {
-	counselors: CounselorsResponse
-	users: UsersResponse
-}
+  counselors: CounselorsResponse;
+  users: UsersResponse;
+};
 
 // Type for usage with type asserted PocketBase instance
 // https://github.com/pocketbase/js-sdk#specify-typescript-definitions
 
 export type TypedPocketBase = PocketBase & {
-	collection(idOrName: 'counselors'): RecordService<CounselorsResponse>
-	collection(idOrName: 'users'): RecordService<UsersResponse>
-}
+  collection(idOrName: 'counselors'): RecordService<CounselorsResponse>;
+  collection(idOrName: 'users'): RecordService<UsersResponse>;
+};
