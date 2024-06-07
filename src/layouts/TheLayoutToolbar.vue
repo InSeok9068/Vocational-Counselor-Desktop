@@ -15,7 +15,9 @@
 
     <template #end>
       <div class="flex items-center gap-3">
-        <span>{{ pb.authStore.isAuthRecord && `${pb.authStore.model!.name} 님` }}</span>
+        <span v-show="pb.authStore.isAuthRecord">
+          {{ `${pb.authStore.isAuthRecord && pb.authStore.model!.name} 님` }}
+        </span>
 
         <Button
           type="button"

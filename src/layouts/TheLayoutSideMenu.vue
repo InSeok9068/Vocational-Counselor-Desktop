@@ -27,22 +27,32 @@ const router = useRouter();
 
 const items = ref([
   {
-    label: 'Documents',
+    label: 'Dashboard',
     items: [
       {
-        label: 'New',
-        icon: 'pi pi-plus',
+        label: '대시보드 (1)',
+        icon: 'pi pi-chart-bar',
+        command: () => router.push('/dashboard-1'),
+      },
+      {
+        label: '대시보드 (2)',
+        icon: 'pi pi-chart-line',
+        command: () => router.push('/dashboard-2'),
+      },
+      {
+        label: '대시보드 (3)',
+        icon: 'pi pi-chart-pie',
+        command: () => router.push('/dashboard-3'),
       },
     ],
   },
   {
-    label: 'Profile',
+    label: 'Settings',
     items: [
       {
-        label: 'Settings',
-        icon: 'pi pi-cog',
-        shortcut: '⌘+O',
-        badge: 2,
+        label: '상담사 관리',
+        icon: 'pi pi-user-edit',
+        command: () => router.push('/counselors'),
       },
     ],
   },
@@ -53,6 +63,11 @@ const items = ref([
         label: 'Page',
         icon: 'pi pi-wrench',
         command: () => router.push('/dev-pages'),
+      },
+      {
+        label: 'Action',
+        icon: 'pi pi-code',
+        command: () => router.push('/dev-actions'),
       },
     ],
   },

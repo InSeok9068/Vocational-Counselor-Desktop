@@ -18,9 +18,9 @@
         <InputText id="name" v-model="signupArgs.name" />
 
         <label for="email">이메일</label>
-        <InputText id="email" v-model="signupArgs.email" />
+        <InputText id="email" v-model="signupArgs.email" @keydown.stop.prevent.enter="signup" />
 
-        <Button label="회원가입" class="mt-2" @click="signup" @keydown.stop.prevent.enter="signup" />
+        <Button label="회원가입" class="mt-2" @click="signup" />
       </div>
     </template>
   </Card>

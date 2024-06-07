@@ -7,9 +7,9 @@
         <InputText id="id" v-model="signinArgs.id" />
 
         <label for="password">비밀번호</label>
-        <Password id="password" v-model="signinArgs.password" />
+        <Password id="password" v-model="signinArgs.password" @keydown.stop.prevent.enter="signin" />
 
-        <Button label="로그인" class="mt-2" @click="signin" @keydown.stop.prevent.enter="signin" />
+        <Button label="로그인" class="mt-2" @click="signin" />
 
         <hr />
         <Button label="회원가입 하러가기" class="mt-2" @click="$router.push('signup')" />
