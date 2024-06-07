@@ -52,9 +52,7 @@ const items = ref([
       {
         label: 'Page',
         icon: 'pi pi-wrench',
-        command: () => {
-          router.push('/dev-pages');
-        },
+        command: () => router.push('/dev-pages'),
       },
     ],
   },

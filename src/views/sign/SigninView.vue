@@ -10,6 +10,9 @@
         <Password id="password" v-model="signinArgs.password" />
 
         <Button label="로그인" class="mt-2" @click="signin" @keydown.stop.prevent.enter="signin" />
+
+        <hr />
+        <Button label="회원가입 하러가기" class="mt-2" @click="$router.push('signup')" />
       </div>
     </template>
   </Card>

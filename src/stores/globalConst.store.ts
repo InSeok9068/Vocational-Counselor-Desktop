@@ -1,12 +1,14 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
+import pb from '../api/pocketbase';
 
 export const useGlobalConstStore = defineStore(
   'globalConst',
   () => {
-    const theme = ref('light');
+    const isAuth = ref(pb.authStore.isAuthRecord);
+
     return {
-      theme,
+      isAuth,
     };
   },
   { persist: true },
