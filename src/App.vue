@@ -1,6 +1,6 @@
 <template>
   <div class="mx-auto">
-    <TheLayoutMenubar />
+    <TheLayoutToolbar />
     <TheLayoutSideMenu />
     <TheLaytout />
     <AppToast />
@@ -15,8 +15,8 @@ import AppConfrimDialog from './components/app/AppConfrimDialog.vue';
 import AppDialog from './components/app/AppDialog.vue';
 import AppToast from './components/app/AppToast.vue';
 import { usePocketbase } from './composables/pocketbase';
-import TheLayoutMenubar from './layouts/TheLayoutMenubar.vue';
 import TheLayoutSideMenu from './layouts/TheLayoutSideMenu.vue';
+import TheLayoutToolbar from './layouts/TheLayoutToolbar.vue';
 import TheLaytout from './layouts/TheLaytout.vue';
 
 const { initPocketbase } = usePocketbase();
