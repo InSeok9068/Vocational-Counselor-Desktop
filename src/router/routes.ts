@@ -1,18 +1,23 @@
 const routes = [
   {
     path: '/',
-    desc: '메인',
+    name: '메인',
     component: () => import('../views/MainView.vue'),
   },
   {
     path: '/signin',
-    desc: '로그인',
+    name: '로그인',
     component: () => import('../views/sign/SigninView.vue'),
   },
   {
     path: '/signup',
-    desc: '회원가입',
+    name: '회원가입',
     component: () => import('../views/sign/SignupView.vue'),
+  },
+  {
+    path: '/dev-pages',
+    name: '개발자 도구(페이지)',
+    component: () => import('../views/dev/DevPagesView.vue'),
   },
 ];
 

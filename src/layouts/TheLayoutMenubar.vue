@@ -1,10 +1,7 @@
 <template>
   <Menubar :model="items">
     <template #start>
-      <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="..." class="fill-primary-500 dark:fill-primary-400" />
-        <path d="..." class="fill-surface-700 dark:fill-surface-0/80" />
-      </svg>
+      <a href="#" class="text-xl font-bold" @click.stop.prevent="$router.push('/')">직업 상담사 실적관리 도구</a>
     </template>
     <template #item="{ item, props, hasSubmenu, root }">
       <a v-ripple class="flex items-center" v-bind="props.action">

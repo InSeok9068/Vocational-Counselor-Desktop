@@ -11,15 +11,17 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import pb from './api/pocketbase';
 import AppConfrimDialog from './components/app/AppConfrimDialog.vue';
 import AppDialog from './components/app/AppDialog.vue';
 import AppToast from './components/app/AppToast.vue';
+import { usePocketbase } from './composables/pocketbase';
 import TheLayoutMenubar from './layouts/TheLayoutMenubar.vue';
 import TheLayoutSideMenu from './layouts/TheLayoutSideMenu.vue';
 import TheLaytout from './layouts/TheLaytout.vue';
 
+const { initPocketbase } = usePocketbase();
+
 onMounted(() => {
-  console.log(pb.collection('users').getFullList());
+  initPocketbase(); // 포켓베이스 초기화
 });
 </script>
