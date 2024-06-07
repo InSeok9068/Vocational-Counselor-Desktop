@@ -24,7 +24,7 @@
           aria-controls="overlay_menu"
           @click="menu.toggle($event)"
         />
-        <Menu ref="menu" id="overlay_menu" :model="menus" :popup="true" />
+        <Menu id="overlay_menu" ref="menu" :model="menus" :popup="true" />
       </div>
     </template>
   </Toolbar>
@@ -41,7 +41,9 @@ const menu = ref();
 const menus = ref<MenuItem[]>([
   {
     label: '로그인',
-    command: () => router.push('/signin'),
+    command: () => {
+      router.push('/signin');
+    },
   },
   {
     label: '로그아웃',
