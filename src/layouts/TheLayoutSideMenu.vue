@@ -47,7 +47,17 @@ const items = ref([
     ],
   },
   {
-    label: 'Settings',
+    label: 'Page',
+    items: [
+      {
+        label: '실적 업로드 (엑셀)',
+        icon: 'pi pi-cloud-upload',
+        command: () => router.push('/upload-excel'),
+      },
+    ],
+  },
+  {
+    label: 'Setting',
     items: [
       {
         label: '상담사 관리',
@@ -57,7 +67,7 @@ const items = ref([
     ],
   },
   {
-    label: 'Dev Tools',
+    label: 'Dev Tool',
     items: [
       {
         label: 'Page',

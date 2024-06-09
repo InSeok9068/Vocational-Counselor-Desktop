@@ -43,10 +43,10 @@
       <InputText id="email" />
 
       <label for="sort">순서</label>
-      <InputText id="sort" />
+      <InputNumber id="sort" />
 
       <label for="del">삭제</label>
-      <InputText id="del" />
+      <InputSwitch id="del" />
 
       <Button :label="`${dialogType === 'insert' ? '등록' : '수정'}`" class="mt-2" />
     </div>

@@ -37,18 +37,22 @@ import { MenuItem } from 'primevue/menuitem';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import pb from '../api/pocketbase';
+import { useGlobalConst } from '../composables/globalConst';
 
 const router = useRouter();
+const { isAuth } = useGlobalConst();
 const menu = ref();
 const menus = ref<MenuItem[]>([
   {
     label: '로그인',
+    visible: !isAuth.value,
     command: () => {
       router.push('/signin');
     },
   },
   {
     label: '로그아웃',
+    visible: isAuth.value,
     command: () => {
       pb.authStore.clear();
       router.push('/signin');

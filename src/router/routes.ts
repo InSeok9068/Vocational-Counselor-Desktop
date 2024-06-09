@@ -29,6 +29,14 @@ const routes = [
     component: () => import('../views/dev/DevActionsView.vue'),
   },
 
+  // Page
+  {
+    path: '/upload-excel',
+    name: '실적 업로드 (엑셀)',
+    meta: 'page',
+    component: () => import('../views/page/UploadExcelView.vue'),
+  },
+
   // Setting
   {
     path: '/counselors',
