@@ -36,7 +36,7 @@
 
   <Dialog v-model:visible="openDialog" :header="`상담사 ${dialogType === 'insert' ? '등록' : '수정'}`">
     <div class="flex flex-col gap-2">
-      <input type="hidden" v-model="counselor.id" />
+      <input v-model="counselor.id" type="hidden" />
 
       <label for="name">이름</label>
       <InputText id="name" v-model="counselor.name" />
