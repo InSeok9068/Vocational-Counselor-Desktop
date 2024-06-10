@@ -18,7 +18,7 @@
       :value="counselors"
       showGridlines
       selectionMode="single"
-      @rowSelect="
+      @row-select="
         () => {
           dialogType = 'update';
           openDialog = true;
