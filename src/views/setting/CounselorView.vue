@@ -80,6 +80,6 @@ const onClickSave = async () => {
 
   openDialog.value = false;
 
-  selectCounselorFullList();
+  await selectCounselorFullList();
 };
 </script>
